@@ -1,44 +1,54 @@
-import { createElement } from "react";
-
 import { useState } from "react";
-import User from "./assets/User";
 
-function App(){
- const [Count,setCount]=useState(3)
+import User, { User2, User3, User4, StudentCard } from "./assets/User";
 
+function App() {
+  const [Count, setCount] = useState(3);
 
-//if we write here true then the text will be displayed esle it is not displaed if we write false then the text will not be displayed
+  // Variables
+  let name = "sagar";
+  let age = 21;
+  let email = "sagarpattasani185@gmail.com";
 
+  // Object
+  let userObject = {
+    name: "sagar",
+    age: "21",
+    email: "sagarpattasani185@gmail.com",
+  };
 
-  
+  // Array
+  let collegeNames = ["urc", "kit", "eatm"];
 
+  // ✅ State ka naam alag rakha — studentName
+  const [studentName, setStudentName] = useState("sagar pattasani");
 
   return (
     <div>
-  <h1> {Count} </h1>
+      <h1>Props in React JS</h1>
 
+      {/* Simple Props */}
+      <User name="sagar" age={25} />
 
+      {/* Variable Props */}
+      <User2 name={name} age={age} email={email} />
 
+      {/* Object Props */}
+      <User3 user={userObject} />
 
-  
-  <button onClick={()=>setCount(Count+1)}>Counter </button>
+      {/* Array Props */}
+      <User4 collegeNames={collegeNames} />
 
-  {
-    Count==0? <h1> counte is 0</h1>: 
-      Count==1? <h1> counte is 1 </h1>:
+      {/* Conditional Render — ✅ Alag naam se conflict nahi */}
+      {studentName && <StudentCard name={studentName} />}
+      //"Agar studentName mein kuch value hai — TAB HI StudentCard dikhao!"
 
-        Count==3? <h1> counte is 3</h1>:
-          Count==4? <h1> counte is 4</h1>: null
-
-    
-  }
-
+      {/* Button */}
+      <button onClick={() => setStudentName("sagar")}>
+        Update Student Name
+      </button>
     </div>
-
-
-
-      
-      
-  )
+  );
 }
-export default App
+
+export default App;

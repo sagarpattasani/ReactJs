@@ -39,6 +39,8 @@ return (
 <div>
 
   <Todo></Todo>
+
+  // this type diffrent types of  function and object are acces in jsx file
 <h1> {name?name:"user not found "}</h1>
   <h1> {Sum(2,4)}</h1>
   <h4>{Operation(5,5,"-")}</h4>
