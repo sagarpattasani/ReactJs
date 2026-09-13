@@ -20,8 +20,25 @@ function Skills(){
       else{
          // ❌ UNCHECKED → REMOVE skill
 
-        setSkills([skills.filter((item)=> item!=event.target.value)])
-        //here remove one so we dont use spread operator if we use also same work
+        setSkills(skills.filter((item)=> item!=event.target.value))
+
+//         this line means example 
+// "Java"   != "React" → keep ✅
+// "React"  != "React" → remove ❌
+// "Python" != "React" → keep ✅
+//No, spread ... only copies items — it cannot remove them. so we are not use spread perator here 
+
+       
+
+
+
+
+      //  Why map Doesn't Work for Removal
+
+// ❌ WRONG — map always returns same length array
+setSkills(skills.map((item) => item !== event.target.value))
+// Input:  ["Java", "React", "Python"]
+// Output: [true, false, true]  ← returns booleans, not skills!
       }
 
 

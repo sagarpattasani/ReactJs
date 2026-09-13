@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import User, { User2, User3, User4, StudentCard } from "./assets/User";
+import User, { User2, User3, User4,User5,User6, StudentCard } from "./assets/User";
 
 function App() {
   const [Count, setCount] = useState(3);
@@ -39,9 +39,14 @@ function App() {
       {/* Array Props */}
       <User4 collegeNames={collegeNames} />
 
+      
+        <User5 collegeNames={collegeNames} />
+          <User6 collegeNames={collegeNames} />
+
       {/* Conditional Render — ✅ Alag naam se conflict nahi */}
       {studentName && <StudentCard name={studentName} />}
-      //"Agar studentName mein kuch value hai — TAB HI StudentCard dikhao!"
+
+{/* Agar studentName mein kuch value hai — TAB HI StudentCard dikhao! */}
 
       {/* Button */}
       <button onClick={() => setStudentName("sagar")}>

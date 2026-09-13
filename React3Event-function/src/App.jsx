@@ -31,7 +31,7 @@ function App(){
   return (
     <div>
 
-       {/* <button onClick={Apple}>click me </button>  we did npot write any in the react js  with this (), we use here  only function name example here Apple  not we call Apple() */}
+       {/* <button onClick={Apple}>click me </button>  we did not write any in the react js  with this (), we use here  only function name example here Apple  not we call Apple() */}
       <button onClick={Apple}>click me </button>
 
       <button onClick={banana}>click me </button>

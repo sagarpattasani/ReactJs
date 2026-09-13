@@ -7,7 +7,7 @@ function App(){
  const [Count,setCount]=useState(3)
 
 
-//if we write here true then the text will be displayed esle it is not displaed if we write false then the text will not be displayed
+
 
 
   
