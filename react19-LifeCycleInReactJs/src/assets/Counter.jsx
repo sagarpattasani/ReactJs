@@ -3,6 +3,8 @@ import { useEffect } from "react";
 const Counter = ({ Count, data }) => {
 
 
+
+
   const handleCounter = () => {
     console.log("handleCounter called");
   }
@@ -13,27 +15,27 @@ const Counter = ({ Count, data }) => {
     console.log("handleCounter2 called");
   }
 
+// life cycle of react js stage1-(mounting phase only )
+  // useEffect(()=>{
+  // console.log("mounting phase only")
 
+  // },[])
 
-  // ✅ Only fires when Count changes
-  useEffect(() => {
-    handleCounter();
-  }, [Count]);
+  //stage2 (update phase only )
+  // useEffect(()=>{
+  // console.log("update phase only")
 
+  // },[Count])
 
+  
+  // stage3 (unmounting  phase only )
+  useEffect(()=>{ 
+    return()=>{
+       console.log("unmount phase only")
+    }
 
+  },[])
 
-
-  // ✅ Only fires when data changes
-  useEffect(() => {
-    handleCounter2();
-  }, [data]);          
-
-// ✅ only  fires when data changes and fires when Count changes
-
-    useEffect(() => {
-    handleCounter2();
-  }, [data],[Count]);  
 
 
   return (
