@@ -6,8 +6,12 @@ function App() {
    
 
 
-//here we write function in parent beacuse if we write the function in child class then when i call child component that function reapeted every time 
-// so we write inside the parent once and use this multiple times so thats why we write inside the parent 
+/*
+here we write function in parent beacuse if we write the function in child class then when i call
+ child component that function reapeted every time  so we write inside the parent once and use this
+  multiple times so thats why we write inside the parent 
+  */
+
 
 const displayName=(name)=>{
   alert(name)
